@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Let's Get Green</title>
+    <link rel="stylesheet" href="co2.css">
+    <link rel="script" href="greenhosting.js">
+<script type ="module">
+  import tgwf from 'https://cdn.skypack.dev/@tgwf/co2';
+  const emissions = new tgwf.co2()
+  const bytesSent = (1000 * 1000 * 1000) // 1GB expressed in bytes
+  const greenHost = false // Is the data transferred from a green host?
+
+  let estimatedCO2 = emissions.perByte(bytesSent, greenHost).toFixed(3)
+
+  document.getElementById('result').innerHTML = estimatedCO2
+    </script> 
+  
+</head>
+<body>
+  <h1>Let's Get Green</h1>
+  <div style="text-align: center;">
+    <h3>The carbon emissions of 1 gigabyte</h3>
+    <p>Sending a gigabyte had a carbon footprint of <span id="result">???????</span> grams of CO2</p>
+</div>
+
+<div style="display: flex; justify-content: center;">
+  <div style="flex: 1; text-align: left;">
+      <p>
+          Green web hosting is a greener, more environmentally friendly way to host websites. 
+          Most green web hosting companies aim to provide high-quality services while doing everything they can to limit their carbon emissions.
+      </p>
+
+      <p> 
+          There are so many companies as shown in the visualization who are actively commiting to providing greener services. Why does this matter? According to <a href="https://www.mckinsey.com/capabilities/mckinsey-digital/our-insights/the-green-it-revolution-a-blueprint-for-cios-to-combat-climate-change"> Mckinsey</a>, technology is 
+          responsible for 1 percent of greenhouse gas emissions, as of now. It will only skyrocket as technology grows with AI, supercomputing, etc. as those technologies require a lot of energy. 
+      </p>
+  </div>
+
+  <div style="flex: 1; text-align: right;">
+      <a href="https://plotly.com/~sehbaw/1/?share_key=eCLgrayITNQl4yIZ1LnC6j" target="_blank" title="Let's Get Green" style="display: block;">
+          <img src="https://plotly.com/~sehbaw/1.png?share_key=eCLgrayITNQl4yIZ1LnC6j" alt="Let's Get Green" style="max-width: 100%; width: 800px;" width="800" onerror="this.onerror=null; this.src='https://plotly.com/404.png';">
+      </a>
+
+      <script data-plotly="sehbaw:1" sharekey-plotly="eCLgrayITNQl4yIZ1LnC6j" src="https://plotly.com/embed.js" async></script>
+      <p><i>*the chart is only visualizing a sample from the <a href="https://admin.thegreenwebfoundation.org/admin/green-urls">green dataset*</a></i></p>
+    </div>
+</div>
+</div>
+
+
+
+
+
+
+<p> Wondering if your web services are up to the par and how you can get green? Check out these resources to see how green your services are.</p>
+ 
+  <div class="row">
+    <div class="column">
+      <iframe src="https://sustainablewebdesign.org/strategies/" width="70%" height="500" name="iframe"></iframe>
+    </div>
+    <div class="column">
+      <iframe src="https://ecograder.com" width="70%" height="500" name="iframe"></iframe>
+    </div>
+  </div>
+
+
+
+
+
+<p align="center"> How can you be able to ensure that you are being green in your operations. Check out the Green 
+  Web Foundations Insights <a href="https://www.thegreenwebfoundation.org/what-we-accept-as-evidence-of-green-power/">here.</a> 
+</p>
+
+
+
+
+
+
+
+
+
+  </body>
+  <footer align="center">
+    Sehba Wani &copy; 2023
+  </footer>
+</html>
